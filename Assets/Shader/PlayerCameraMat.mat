@@ -44,7 +44,7 @@ Material:
     m_Colors:
     - _Highlight: {r: 0, g: 0.03, b: 0, a: 0}
     - _HighlightColor: {r: 2.670157, g: 2.670157, b: 2.670157, a: 1}
-    - _PlayerColor: {r: 0.227451, g: 1.32549, b: 0.09411765, a: 0}
+    - _PlayerColor: {r: 0.06592753, g: 0.5968176, b: 0.0693974, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &3952969287977925195
 MonoBehaviour:

@@ -488,7 +488,6 @@ GameObject:
   - component: {fileID: 193711486}
   - component: {fileID: 193711485}
   - component: {fileID: 193711484}
-  - component: {fileID: 193711483}
   m_Layer: 6
   m_Name: Circle (3)
   m_TagString: Untagged
@@ -517,19 +516,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &193711483
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 193711481}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5be96cdc9f45f534bbbf00797c2a530c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: {x: 0, y: 20}
 --- !u!231 &193711484
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -857,7 +843,6 @@ GameObject:
   - component: {fileID: 312064727}
   - component: {fileID: 312064726}
   - component: {fileID: 312064725}
-  - component: {fileID: 312064724}
   m_Layer: 6
   m_Name: Circle (7)
   m_TagString: Untagged
@@ -881,19 +866,6 @@ Transform:
   m_Father: {fileID: 386668579}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &312064724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 312064722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5be96cdc9f45f534bbbf00797c2a530c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: {x: 0, y: 20}
 --- !u!231 &312064725
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -1055,6 +1027,8 @@ GameObject:
   - component: {fileID: 386668583}
   - component: {fileID: 386668580}
   - component: {fileID: 386668581}
+  - component: {fileID: 386668585}
+  - component: {fileID: 386668584}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -1098,10 +1072,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.0001
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.1
   m_Material: {fileID: 0}
   m_Interpolate: 1
   m_SleepingMode: 1
@@ -1175,6 +1149,57 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &386668584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386668578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 2af7292ba7cf528499d25d645bbedb97, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b58d60b3-3ed1-4806-8a05-0993551313fd
+    m_ActionName: PlayerMovement/Jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c7ee174f-bb23-48ec-ad8b-f55a6bae5916
+    m_ActionName: PlayerMovement/Direction[/Mouse/delta]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: KeyMouse
+  m_DefaultActionMap: PlayerMovement
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 1452457153}
+--- !u!114 &386668585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386668578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be96cdc9f45f534bbbf00797c2a530c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: {x: 20, y: 20}
 --- !u!1 &437843916
 GameObject:
   m_ObjectHideFlags: 0
@@ -1323,7 +1348,6 @@ GameObject:
   - component: {fileID: 488376972}
   - component: {fileID: 488376971}
   - component: {fileID: 488376970}
-  - component: {fileID: 488376969}
   m_Layer: 6
   m_Name: Circle (2)
   m_TagString: Untagged
@@ -1352,19 +1376,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &488376969
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 488376967}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5be96cdc9f45f534bbbf00797c2a530c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: {x: 0, y: 20}
 --- !u!231 &488376970
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -1768,7 +1779,6 @@ GameObject:
   - component: {fileID: 910866122}
   - component: {fileID: 910866121}
   - component: {fileID: 910866120}
-  - component: {fileID: 910866119}
   - component: {fileID: 910866126}
   m_Layer: 6
   m_Name: Circle
@@ -1798,19 +1808,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &910866119
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 910866117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5be96cdc9f45f534bbbf00797c2a530c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: {x: 0, y: 20}
 --- !u!231 &910866120
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -2072,7 +2069,6 @@ GameObject:
   - component: {fileID: 1022307768}
   - component: {fileID: 1022307767}
   - component: {fileID: 1022307766}
-  - component: {fileID: 1022307765}
   m_Layer: 6
   m_Name: Circle (5)
   m_TagString: Untagged
@@ -2101,19 +2097,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &1022307765
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1022307763}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5be96cdc9f45f534bbbf00797c2a530c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: {x: 0, y: 20}
 --- !u!231 &1022307766
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -2273,7 +2256,6 @@ GameObject:
   - component: {fileID: 1106275286}
   - component: {fileID: 1106275285}
   - component: {fileID: 1106275284}
-  - component: {fileID: 1106275283}
   m_Layer: 6
   m_Name: Circle (4)
   m_TagString: Untagged
@@ -2302,19 +2284,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &1106275283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1106275281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5be96cdc9f45f534bbbf00797c2a530c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: {x: 0, y: 20}
 --- !u!231 &1106275284
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -4169,7 +4138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5be96cdc9f45f534bbbf00797c2a530c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: {x: 0, y: 50}
+  jumpForce: {x: 100, y: 100}
 --- !u!1 &1728383110
 GameObject:
   m_ObjectHideFlags: 0
@@ -4353,7 +4322,6 @@ GameObject:
   - component: {fileID: 1775945209}
   - component: {fileID: 1775945208}
   - component: {fileID: 1775945207}
-  - component: {fileID: 1775945206}
   m_Layer: 6
   m_Name: Circle (1)
   m_TagString: Untagged
@@ -4382,19 +4350,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &1775945206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1775945204}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5be96cdc9f45f534bbbf00797c2a530c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: {x: 0, y: 20}
 --- !u!231 &1775945207
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -5042,7 +4997,6 @@ GameObject:
   - component: {fileID: 2114156321}
   - component: {fileID: 2114156320}
   - component: {fileID: 2114156319}
-  - component: {fileID: 2114156318}
   m_Layer: 6
   m_Name: Circle (6)
   m_TagString: Untagged
@@ -5071,19 +5025,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &2114156318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114156316}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5be96cdc9f45f534bbbf00797c2a530c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: {x: 0, y: 20}
 --- !u!231 &2114156319
 SpringJoint2D:
   m_ObjectHideFlags: 0
