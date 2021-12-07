@@ -63,7 +63,7 @@
                     "id": "a6d1e070-1e2e-4c0c-9d6f-0392d8a63028",
                     "path": "<Gamepad>/leftStick",
                     "interactions": "",
-                    "processors": "NormalizeVector2",
+                    "processors": "",
                     "groups": "Controller",
                     "action": "Direction",
                     "isComposite": false,
